@@ -158,11 +158,12 @@ const fadeIn = {
 const placeholderAvatar = (
   <div className="relative">
     <div className="absolute -inset-1 rounded-full bg-aurora/40 blur-3xl" aria-hidden="true" />
-    <div className="flex h-44 w-44 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-white/20 via-white/10 to-transparent text-center text-sm font-medium uppercase tracking-[0.3em] text-white/70 backdrop-blur">
-      Upload
-      <br />
-      Headshot
-    </div>
+    <img
+      src="/Headshot.jpg"
+      alt="Portrait of Francisc Pap"
+      className="h-44 w-44 rounded-full border border-white/30 object-cover shadow-glow"
+      loading="lazy"
+    />
   </div>
 )
 
