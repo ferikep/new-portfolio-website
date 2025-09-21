@@ -97,17 +97,17 @@ const skillGroups = [
 
 const projects: Project[] = [
   {
-    title: "HomeLab Media Platform – Unraid + Plex",
+    title: "HomeLab Media Platform - Unraid + Plex",
     badge: "Featured",
-    context: "Role: Developer • Outcome: 20 users and up to 8 concurrent 1080p streams, 99.9% uptime",
+    context: "Role: Developer - Outcome: 20 users and up to 8 concurrent 1080p streams, 99.9% uptime",
     description:
       "Operate a 20TB parity-protected Unraid server hosting Plex for friends and family, prioritising reliability, security, and effortless access.",
     tags: ["Unraid", "Docker/Compose", "Plex", "Sonarr/Radarr"],
   },
   {
-    title: "HexOust – Interactive JavaFX Hex-Grid Strategy Game",
+    title: "HexOust - Interactive JavaFX Hex-Grid Strategy Game",
     badge: "Collaborative Project",
-    context: "Team of 3 • Agile sprints with peer PR reviews and fortnightly showcases",
+    context: "Team of 3 - Agile sprints with peer PR reviews and fortnightly showcases",
     description:
       "Led a 3-person agile team to build a JavaFX strategy game with an axial grid engine, BFS capture mechanics, thematic UI, and comprehensive JUnit test coverage.",
     tags: ["Java", "JavaFX", "JUnit 5", "Agile Sprints", "Game Logic"],
@@ -265,7 +265,7 @@ function App() {
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.3em] text-comet">Portfolio 2025</p>
                 <h1 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
-                  Francisc Pap — aspiring reliability-focused software engineer.
+                  Francisc Pap - aspiring reliability-focused software engineer.
                 </h1>
                 <p className="mt-4 max-w-2xl text-base text-white/80">
                   3rd-year UCD student seeking a 6-month internship from March. I enjoy building clean, well-tested software and running reliable services. Core strengths include Python, C, Java, SQL, Git, Docker/Compose, Linux administration (Unraid), and end-to-end monitoring, logging, backup, and recovery workflows.
@@ -280,7 +280,7 @@ function App() {
               <h2 className="section-title mb-6">Profile</h2>
               <div className="grid gap-6 text-white/85 md:grid-cols-2">
                 <p>
-                  I thrive where reliability matters—designing systems that teammates can trust and iterating with strong feedback loops. Whether maintaining a self-hosted media platform or architecting a JavaFX strategy game, I bring intentional testing, observability, and documentation so everyone can build faster.
+                  I thrive where reliability matters-designing systems that teammates can trust and iterating with strong feedback loops. Whether maintaining a self-hosted media platform or architecting a JavaFX strategy game, I bring intentional testing, observability, and documentation so everyone can build faster.
                 </p>
                 <p>
                   Looking ahead to my 6-month internship, I want to join teams shipping user-facing experiences or platform tooling where craftsmanship, measurement, and ownership are valued. I combine infrastructure know-how with product empathy and a collaborative mindset.
@@ -318,14 +318,14 @@ function App() {
               <h2 className="section-title mb-8">Education</h2>
               <div className="flex flex-col gap-6 text-white/85 md:flex-row md:items-start md:justify-between">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-comet">2022 — Present</p>
+                  <p className="text-sm uppercase tracking-[0.3em] text-comet">2022 - Present</p>
                   <h3 className="mt-2 font-display text-2xl text-white">
-                    University College Dublin · BSc Computer Science
+                    University College Dublin - BSc Computer Science
                   </h3>
                   <p className="mt-2 text-sm text-starlight">First Class Honours (1:1)</p>
                   <ul className="mt-4 space-y-2 text-sm">
                     <li>
-                      <span className="badge-pill">Cothrom na Féinne Scholarship</span>
+                      <span className="badge-pill">Cothrom na Feinne Scholarship</span>
                     </li>
                     <li>
                       <span className="badge-pill">UCD Entrance Scholar Award</span>
@@ -410,11 +410,11 @@ function App() {
           <motion.section id="contact" className="mb-16" {...fadeIn}>
             <div className="glass-panel p-10">
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <h2 className="section-title">Let’s Build Together</h2>
+                <h2 className="section-title">Let's Build Together</h2>
                 <span className="badge-pill">Formspree Integration</span>
               </div>
               <p className="mt-4 max-w-2xl text-sm text-white/80">
-                Ready for an internship chat or have a project in mind? Drop me a message below—your note routes straight to my inbox via Formspree. I reply within two working days.
+                Ready for an internship chat or have a project in mind? Drop me a message below - your note routes straight to my inbox via Formspree. I reply within two working days.
               </p>
               <form className="mt-8 grid gap-6 md:grid-cols-2" action="https://formspree.io/f/xblannql" method="POST">
                 <div>
@@ -476,7 +476,7 @@ function App() {
 
         <footer className="relative z-10 border-t border-white/5 bg-black/50">
           <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 text-xs text-white/60 md:flex-row lg:px-12">
-            <p>© {new Date().getFullYear()} Francisc Pap. Crafted with React, Vite, and Tailwind.</p>
+            <p>(c) {new Date().getFullYear()} Francisc Pap. Crafted with React, Vite, and Tailwind.</p>
             <div className="flex gap-4">
               <a href="mailto:ferike.pap@gmail.com" className="transition hover:text-comet">
                 Email
