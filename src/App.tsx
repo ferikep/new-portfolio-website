@@ -12,6 +12,9 @@ import {
 } from "react-icons/fa"
 import type { IconType } from "react-icons"
 
+const BASE_URL = import.meta.env.BASE_URL
+
+
 type ContactAction = {
   label: string
   href: string
@@ -54,7 +57,7 @@ const contactActions: ContactAction[] = [
   },
   {
     label: "Download CV",
-    href: "/CV.pdf",
+    href: `${BASE_URL}CV.pdf`,
     icon: FaDownload,
     download: true,
   },
@@ -155,11 +158,13 @@ const fadeIn = {
   transition: { duration: 0.6, ease: "easeOut" },
 } satisfies MotionProps
 
+const HEADSHOT_SRC = `${BASE_URL}Headshot.jpg`
+
 const placeholderAvatar = (
   <div className="relative">
     <div className="absolute -inset-1 rounded-full bg-aurora/40 blur-3xl" aria-hidden="true" />
     <img
-      src="/Headshot.jpg"
+      src={HEADSHOT_SRC}
       alt="Portrait of Francisc Pap"
       className="h-44 w-44 rounded-full border border-white/30 object-cover shadow-glow"
       loading="lazy"
@@ -502,3 +507,5 @@ function App() {
 }
 
 export default App
+
+
