@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# Francisc Pap - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, space-themed personal site built with React, TypeScript, Vite, and Tailwind CSS. It introduces Francisc Pap (3rd-year Computer Science @ UCD), showcases projects and coursework, highlights skills, and provides multiple contact avenues (including a Formspree form and CV download).
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + TypeScript
+- Vite build tooling
+- Tailwind CSS with custom design tokens
+- Framer Motion for micro-interactions
+- Formspree form handling
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive hero section with headshot, quick-contact buttons, and dark-mode toggle
+- Profile, skills, education, project, and coursework sections with deliberate copy and badges
+- Animated background orbs and glassmorphism styling for a space vibe
+- Formspree-powered contact form plus direct email, phone, LinkedIn, and CV download links
+- Build-ready for static hosting (GitHub Pages, Netlify, Vercel, etc.)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+~~~bash
+# install dependencies
+git clone https://github.com/ferikep/new-portfolio-website.git
+cd new-portfolio-website
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# start local dev server
+npm run dev
+~~~
+
+Open the printed URL (defaults to http://localhost:5173) to preview.
+
+## Available Scripts
+
+| Command           | Description                                   |
+| ----------------- | --------------------------------------------- |
+| `npm run dev`     | Vite dev server with hot module reload        |
+| `npm run build`   | Type-check and create production build        |
+| `npm run lint`    | Run ESLint (if you add lint configuration)    |
+| `npm run preview` | Preview the production bundle locally         |
+
+## Project Structure
+
+```
+app/
+|-- public/
+|   |-- CV.pdf           # Downloaded via header buttons
+|   |-- Headshot.jpg     # Displayed in hero section
+|   |-- vite.svg
+|-- src/
+|   |-- App.tsx          # Page sections and animations
+|   |-- index.css        # Tailwind entry + global styling
+|   |-- main.tsx         # React bootstrap
+|   |-- assets/          # Vite starter assets (safe to prune)
+|-- tailwind.config.js   # Custom palette, shadows, keyframes
+|-- postcss.config.js
+|-- tsconfig*.json
+|-- package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Customization Notes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Update text/content inside `src/App.tsx`. Each section (skills, coursework, projects) is configured with arrays near the top of the file.
+- Replace assets in `public/` as needed. The hero headshot references `/Headshot.jpg`; the CV button points to `/CV.pdf`.
+- Tailwind design tokens live in `tailwind.config.js`. Adjust colors, shadows, or animations there.
+- Global effects (starfield gradients, glass panels, badges) are defined in `src/index.css`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deployment
+
+The site is a static bundle. Common options:
+
+1. **GitHub Pages**: run `npm run build`, then publish the `dist/` folder with your preferred Pages workflow.
+2. **Netlify / Vercel / Cloudflare**: set build command to `npm run build` and output directory to `dist`.
+
+## Contact
+
+- Email: [ferike.pap@gmail.com](mailto:ferike.pap@gmail.com)
+- LinkedIn: [linkedin.com/in/francisc-pap-a8b960330](https://www.linkedin.com/in/francisc-pap-a8b960330)
