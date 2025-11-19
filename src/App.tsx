@@ -11,6 +11,8 @@ import {
   FaSun,
 } from "react-icons/fa"
 import type { IconType } from "react-icons"
+import StarField from "./components/StarField"
+import Spaceship from "./components/Spaceship"
 
 const BASE_URL = import.meta.env.BASE_URL
 
@@ -198,7 +200,7 @@ function App() {
           target={external ? "_blank" : undefined}
           rel={external ? "noreferrer noopener" : undefined}
           download={download}
-          className="group relative flex items-center gap-3 rounded-full border border-white/10 bg-white/10 px-5 py-3 text-sm font-medium text-white/90 shadow-glow transition hover:-translate-y-0.5 hover:border-comet/60 hover:bg-white/20 hover:text-white"
+          className="group relative flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white/90 shadow-glow transition hover:-translate-y-0.5 hover:border-comet/60 hover:bg-white/10 hover:text-white"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-aurora/20 text-aurora transition group-hover:bg-aurora group-hover:text-white">
             <Icon className="text-base" />
@@ -211,22 +213,12 @@ function App() {
 
   return (
     <div className={isDark ? "dark" : ""}>
+      <StarField />
+      <Spaceship className="top-20" delay={0} duration={25} />
+      <Spaceship className="top-1/3" delay={10} duration={30} />
+      <Spaceship className="bottom-1/4" delay={5} duration={20} />
+
       <div className="relative min-h-screen overflow-hidden bg-transparent">
-        <motion.div
-          className="pointer-events-none absolute -left-36 top-24 h-72 w-72 rounded-full bg-aurora/25 blur-3xl"
-          animate={{ y: [0, -12, 0], x: [0, 6, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-        />
-        <motion.div
-          className="pointer-events-none absolute bottom-20 right-[-6rem] h-80 w-80 rounded-full bg-comet/20 blur-3xl"
-          animate={{ y: [0, -12, 0], x: [0, 6, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 3 }}
-        />
-        <motion.div
-          className="pointer-events-none absolute left-1/2 top-1/3 h-64 w-64 -translate-x-1/2 rounded-full bg-starlight/15 blur-3xl"
-          animate={{ y: [0, -10, 0], x: [0, -8, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 5 }}
-        />
 
         <header className="sticky top-0 z-40 border-b border-white/5 bg-midnight/60 backdrop-blur-xl transition-all duration-500 dark:bg-black/60">
           <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 text-sm text-white/80 lg:px-12">
